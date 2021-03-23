@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <title>navbar</title>
+</head>
+<body>
+
+
+<div th:fragment="NAVBAR">
+    <nav class="navbar   navbar-light bg-dark">
+        <div class="container-fluid">
+            <p class="navbar-brand" th:text="'User: '+${user}" style="color: dodgerblue" ></p>
+            <p class="navbar-brand" th:text="'  with roles: '+${roles}" style="color: dodgerblue"></p>
+            <a class="nav-link" th:href="@{/logout}" style="color: dodgerblue">Logout</a>
+        </div>
+    </nav>
+</div>
+
+</body>
+</html>

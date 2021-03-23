@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+<!--    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+<!-- ...................NAVBAR............................................-->
+
+<div th:replace="fragments/navbar.html :: NAVBAR"></div>
+
+<!-- ......................MAIN CONTENT......................................-->
+
+<div class="row" >
+
+    <div th:replace="fragments/leftPanel.html :: LEFT"></div>
+
+    <div class="col-lg-6" >
+        <div class="tab-content " >
+            <!--        Первый КОНТЕНТ ADMIN-->
+            <div class="tab-pane active" id="v-pills-home">
+
+                <!--...... ADD & TABLE...........-->
+                <div class="col-10" >
+                    <div class="tab-content" >
+                        <h4  > <b> ADMIN PANEL</b></h4><br>
+                        <div th:replace="fragments/adminPanel.html :: ADMINPANEL"></div>
+
+                        <!--    Содержание по ссылке TABLE-->
+                        <div th:replace="fragments/mainTable.html :: TABLE"></div>
+                        <!--    Содержание по ссылке  NEW -->
+                        <div th:replace="fragments/add.html :: ADD"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--         ..................ВТОРОЙ КОНТЕНТ USER -->
+            <div th:replace="fragments/selfUser.html :: SELF">  </div>
+        </div>
+    </div>
+</div>
+<!--....................................  Модальные окна .......................-->
+<!--............. EDIT..............-->
+<div th:replace="fragments/editModal.html :: EDIT"></div>
+
+<!--...........  DELETE.............-->
+<div th:replace="fragments/deleteModal.html :: DELETE"></div>
+
+
+
+<script type="text/javascript" src="../static/start/start.js"></script>
+
+<script type="text/javascript" src="../static/table/buildUsersTable.js"></script>
+<script type="text/javascript" src="../static/table/fillRows.js"></script>
+<script type="text/javascript" src="../static/table/reDrawUpdatedUser.js"></script>
+<script type="text/javascript" src="../static/table/requestDataUsers.js"></script>
+<script type="text/javascript" src="../static/table/createRows.js"></script>
+
+<script type="text/javascript" src="../static/add/addNewUser.js"></script>
+<script type="text/javascript" src="../static/add/proceedAdding.js"></script>
+<script type="text/javascript" src="../static/add/getCheckedCheckboxesForAdd.js"></script>
+
+<script type="text/javascript" src="../static/delete/deleteUserById.js"></script>
+<script type="text/javascript" src="../static/delete/fillDeleteWindow.js"></script>
+<script type="text/javascript" src="../static/delete/deleteUser.js"></script>
+
+<script type="text/javascript" src="../static/edit/fillEditWindow.js"></script>
+<script type="text/javascript" src="../static/edit/getUserForEditModal.js"></script>
+<script type="text/javascript" src="../static/edit/updateUser.js"></script>
+<script type="text/javascript" src="../static/edit/getCheckedCheckboxesForEdit.js"></script>
+<script type="text/javascript" src="../static/edit/proceedEdit.js"></script>
+
+<script type="text/javascript" src="../static/util/getRolesNames.js"></script>
+
+
+
+</body>
+</html>

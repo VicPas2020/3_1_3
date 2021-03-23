@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <title>add</title>
+</head>
+<body>
+
+                    <div th:fragment="ADD"  id="home" class="tab-pane "  >
+
+                        <form id="FormAddID">
+                            <div class="form-group">
+                                <label for="first-name-add" class="col-form-label">first_name:</label>
+                                <input type="text" class="form-control" id="first-name-add" name="first_name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="last-name-add" class="col-form-label">last_name:</label>
+                                <input type="text" class="form-control" id="last-name-add" name="last_name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="level-add" class="col-form-label">level:</label>
+                                <input type="number" class="form-control" id="level-add" name="level" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="login-add" class="col-form-label">login:</label>
+                                <input type="text" class="form-control" id="login-add" name="login" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pass-add" class="col-form-label">Password:</label>
+                                <input type="text" class="form-control" id="pass-add" name="password" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="role-name-add"  class="col-form-label" >Select roles</label>
+
+                                <select  name="roleInput" multiple id="role-name-add" required  >
+                                    <option  class="add"           value="ROLE_ADMIN" id="selectAdmin"> ADMIN   </option>
+                                    <option  class="add"  selected  value="ROLE_USER"  id="selectUser"> USER  </option>
+                                </select>
+                            </div>
+
+                            <button  type="button" class="btn btn-lg btn-success col-lg-4" value="Save" id="save-add" >Save</button>
+                            <button type="reset" class="btn btn-lg btn-link col-lg-2">Reset</button>
+                        </form>
+                    </div>
+
+
+</body>
+</html>

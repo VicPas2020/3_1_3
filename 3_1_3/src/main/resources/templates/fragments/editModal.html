@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<div  th:fragment="EDIT" class="modal fade"  id="editUser" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+
+    <form   data-toggle="modal" id="FormEditID" >
+        <!--    method="post"-->
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalLabel">EDIT</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body" >
+                    <!--                    если сделать поле id  -disabled - появится ошибка Duplicate for key.....&ndash;&gt;-->
+                    <div class="form-group">
+                        <label for="id-name-edit" class="col-form-label">id</label>
+                        <input   class="form-control" id="id-name-edit"  readonly    >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="first-name-edit" class="col-form-label">first name:</label>
+                        <!--                        value="${__${user.country}__}"-->
+                        <input type="text" class="form-control" id="first-name-edit"   >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="last-name-edit" class="col-form-label">last name:</label>
+                        <input type="text" class="form-control" id="last-name-edit"  >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="level-edit" class="col-form-label">level:</label>
+                        <input type="number" class="form-control" id="level-edit"  >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="login-edit" class="col-form-label">login:</label>
+                        <input type="text" class="form-control" id="login-edit" readonly >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="pass-edit" class="col-form-label">Password:</label>
+                        <input type="password" class="form-control" id="pass-edit" readonly >
+                    </div>
+
+                    <div class="form-group"  >
+
+                        <label  for="role-name-edit"  class="col-form-label" >Choose roles</label>
+
+                        <select    name="roleInput" multiple id="role-name-edit" >
+
+                            <option class="form-control form-control-sm bg-light" value="ROLE_USER"    id="checkboxUserEdit"  > USER  </option>
+                            <option class="form-control form-control-sm bg-light" value="ROLE_ADMIN"   id="checkboxAdminEdit" > ADMIN </option>
+
+                        </select>
+                    </div>
+
+                </div>
+                <div class="modal-footer" >
+                    <button type="button" class="btn btn-secondary col-lg-2" data-dismiss="modal">Back </button>
+                    <button type="button" class="btn btn-primary col-lg-4" value="Edit" id="editFunction" >Edit</button>
+                </div>
+
+            </div>
+        </div>
+    </form>
+
+</div>
+</body>
+</html>
